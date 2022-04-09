@@ -1,6 +1,6 @@
 html {
     font-size: medium;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Graphik-Light',sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -8,7 +8,7 @@ body {
     color: black;
     /*font-family: 'Graphik-Light',sans-serif; */
     display: block;
-    background-image: url("/HW4-2022-main/images/concrete_seamless.png");
+    background-image: url("images/concrete_seamless.png")
     background-color: #f1f1f1;
 }
 
