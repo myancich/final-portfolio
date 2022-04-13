@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link to the favicon image -->
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="images/favicon.ico.png">
     <!-- Link to the reset file -->
     <link rel="stylesheet" href="css/html5reset.css">
     <!-- Link to the stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&family=Space+Mono&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ea1442c5d8.js" crossorigin="anonymous"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MSP0ZY4BC3"></script>
@@ -30,11 +29,11 @@
     
         <nav>
 			<ul>
-				<li><a href = "index.html" >Home</a></li>
+				<li><a href = "index.html" >About</a></li>
 				<li><a href = "compost.html" >Compost</a></li>
 				<li><a href = "cutdownplastic.html" >Plastic Consumption</a></li>
                 <!-- Add class = active because this is current page -->
-				<li class="active"><a href = "umichstudents.html" >Organizations</a></li>
+				<li class="active"><a href = "umichstudents.html" >Get Involved</a></li>
             </ul>
 		</nav>
 		<h1>How to Get Involded on Campus</h1>
@@ -42,10 +41,10 @@
 
     <main class = "gallery" id="main"> 
         <h2> Here are a variety of organizations you can join: </h2>
-        <p> University of Michigan Sustainable Food Program. UMSFP plans, sponsors, and publicizes events that strengthen the sustainable food system both on campus and within the wider Washtenaw County community. These events serve as leadership opportunities for the students planning them, platforms for the students and community members featured at them, and collaborative spaces that encourage greater interconnectedness among local food focused groups. The events are purposefully diverse in programming and location to capture a diverse audience. Some event formats include festivals, conferences, workshops, speaker series, and potlucks.</p>
-        <p> Days for Girls. Days for Girls is a nonprofit organization that strives to provide access to sustainable hygiene and health education through the creation of reusable feminine hygiene products.</p>
-        <p>Friends of the Campus Farm. The members of the Friends of the Campus Farm established this group to empower students to create a healthy future through sustainable food education, training, and outreach. FCF is established for the purpose of creating an on campus farm and providing constructive student input at the University of Michigan, which will provide students with opportunities to develop knowledge and skills related to farming and agriculture, food preparation and preservation, personal and environmental health, community outreach, and business and economic development.</p>
-        <h2> Check out these other UofM organizations</h2>
+        <p><i class="fa-solid fa-1"></i>University of Michigan Sustainable Food Program. UMSFP plans, sponsors, and publicizes events that strengthen the sustainable food system both on campus and within the wider Washtenaw County community. These events serve as leadership opportunities for the students planning them, platforms for the students and community members featured at them, and collaborative spaces that encourage greater interconnectedness among local food focused groups. The events are purposefully diverse in programming and location to capture a diverse audience. Some event formats include festivals, conferences, workshops, speaker series, and potlucks.</p>
+        <p><i class="fa-solid fa-2"></i>Days for Girls. Days for Girls is a nonprofit organization that strives to provide access to sustainable hygiene and health education through the creation of reusable feminine hygiene products.</p>
+        <p><i class="fa-solid fa-3"></i>Friends of the Campus Farm. The members of the Friends of the Campus Farm established this group to empower students to create a healthy future through sustainable food education, training, and outreach. FCF is established for the purpose of creating an on campus farm and providing constructive student input at the University of Michigan, which will provide students with opportunities to develop knowledge and skills related to farming and agriculture, food preparation and preservation, personal and environmental health, community outreach, and business and economic development.</p>
+        <h2> Check out these other organizations</h2>
         <!--LATER ADD LINKS TO MAIZE PAGES FOR EACH IMAGE-->
         <img src = "images/Michigan_orgs_Fair.jpeg" alt = "Michigan org Fair"/>
         
@@ -81,11 +80,47 @@
             <img src = "images/org2.jpeg" alt = "Days for Girls" />
         </a>
         
+    	<form action="https://formspree.io/f/xayvbbpr" method="POST">
+            <h1> Get Involved in Caring for the Environment </h1>
+            <i class="fa-regular fa-handshake" id = "handshake"></i>
+            
+            <label for="email_id">Your Email</label>
+            <input type="text" placeholder="Enter Your Email" id = "email_id" name="email" required>
+            
+            <label for="msg">Leave A Message</label>
+    
+            <textarea placeholder="Enter your message" id = "msg" name="mesg" required></textarea><br>
+        
+            
+            <label for="collegeyear">What year are you in?</label>
+            <select name="year" id="collegeyear">
+                <option value="Freshman">Freshman</option>
+                <option value="Sophomore">Sophomore</option>
+                <option value="Junior">Junior</option>
+                <option value="Senior">Senior</option>
+            </select>
+            <section class = "activities">
+                <h2>What do you currently do to be sustainable?</h2>
+                  <br>
+                  <input type="radio" name="activities" id="Compost" value="Compost">
+                  <label for="Compost">Compost!</label>
+                  <input type="radio" name="activities" id="Walk/Bike" value="Walk/Bike">
+                     <label for="Walk/Bike">Walk or Bike to Campus</label>
+                <input type="radio" name="activities" id="shoplocal" value="shoplocal">
+                  <label for="shoplocal">Shop Locally!</label>
+                    <input type="radio" name="activities" id="none" value="none">
+                  <label for="none">Nothing Yet</label>
+            </section>
+            <button type="submit">Send</button>
+        </form> 
+
     </main>
 
     <footer> 
-        <p>Mia Yancich 2022</p>
-        <i class="fa-solid fa-seedling"></i>
+        <div>
+            Mia Yancich &copy; SI 339 Final Project, 2022
+            <i class="fa-solid fa-seedling"></i>
+        </div>
     </footer>
 </body>	
 </html>

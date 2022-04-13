@@ -1,73 +1,32 @@
 html {
-    font-size: medium;
-    font-family: 'Graphik-Light',sans-serif;
     scroll-behavior: smooth;
 }
 
 body {
+    font-family: 'Graphik-Light',sans-serif;
     color: black;
-    /*font-family: 'Graphik-Light',sans-serif; */
-    display: block;
-    background-image: url("images/concrete_seamless.png")
     background-color: #f1f1f1;
 }
 
-body.compost {
-    background-image: url("/mia-portfolio/images/IMG_6383.jpeg");
-    background-color: #f1f1f1;
-
-      /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+nav {
+    background-color: #2c4251;
+    padding: 15px 10px;
+    border: 10px solid firebrick;
 }
 
-
-.active{
-    background-color: lightseagreen;
-    font-size: larger;
-    font-weight: bold;
-    text-decoration: black wavy underline;
+nav a {
+    color:  #f1f1f1;
+    text-transform: uppercase;
 }
 
-
-h1{
-    font-size: 30px;
-    margin: 12px 0;
-    display: block;
-    text-align: left;
-    width: auto;
-}
-
-h2 {
-    font-size: 20px;
-    font-style: italic;
-}
-
-footer{
-    background-color: lightgreen;
-    padding: 32px 8px;
-}
-
-nav{
-    background-color: lightgreen;
-    padding: 25px 10px;
-}
-  
-nav a{
-    color: black;
-    font-weight: bold;
-}
-  
 nav ul{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     list-style-type: none;
 }
 
-nav li{
+nav li {
     margin: 10px;
 }
 
@@ -88,121 +47,191 @@ a.skip {
 a.skip:focus {
     left: 0px;
 }
-  
-header p{
-    color: white;
-    font-size: 24px;
-    padding: 0 100px;       
+
+.active {
+    background-color: firebrick;
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: #f1f1f1 underline;
+    color:  #f1f1f1;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 12px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#special_text {
+    font-size: 50px;
+	font-weight: bolder;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	background-image: url('../images/Earth.jpeg');
+    padding-top: 5%;
+}
+
+.intropara {
+    text-transform: uppercase;
+    font-size: 1.25em;
+    line-height: 1.5em;
+}
+
+h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 5%;
+    font-style: italic;
+    padding-bottom: 0.5em;
+    border-bottom: 5px solid #2c4251;
+}
+
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: firebrick;
+    text-align: center;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: 5px;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    align-content: center;
+    justify-content: space-between;
+}
+
+div {
+    width: 90%;
+    margin: 0 auto;
     text-align: center;
 }
 
 img {
     margin: 0 auto;
-    width: 100px;
+    width: 100%; 
+    height: auto;
 }
 
-img:nth-child(even){
-    background-color: lightgreen;
-    margin: 12px;
-    width: 325px;
-    border: 2px solid black;
-    border-radius: 10%;
-    padding: 15px;
-}
-
-img:nth-child(odd){
-    background-color: lightseagreen;
-    margin: 12px;
-    width: 325px;
-    border: 2px solid black;
-    border-radius: 10%;
-    padding: 15px;
-}
-
-img:hover{
-   border: dashed; 
-} 
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    row-gap: 30px;
-}
-
-.method1,
-.method2,
-.method3,
-.method4,
-.method5,
-.method6,
-.method7,
-.method8,
-.method9 {
-    grid-column: 2 / span 1;
-}
-
-.method1-image,
-.method2-image,
-.method3-image,
-.method4-image,
-.method5-image,
-.method6-image,
-.method7-image,
-.method8-image,
-.method9-image {
-    grid-column: 1 / span 3;
-    max-height: 500px;
-    overflow: hidden;
-    z-index: .1;
-}
-
-.method1, .method1-image {
-    grid-row: 1 / span 1;
-}
-
-.method2, .method2-image {
-    grid-row: 2 / span 1;
-}
-
-.method3, .method3-image {
-    grid-row: 3 / span 1;
-}
-
-.method4, .method4-image {
-    grid-row: 4 / span 1;
-}
-
-.method5, .method5-image {
-    grid-row: 5 / span 1;
-}
-
-.method6, .method6-image {
-    grid-row: 6 / span 1;
-}
-
-.method7, .method7-image {
-    grid-row: 7 / span 1;
-}
-
-.method8, .method8-image {
-    grid-row: 8 / span 1;
-}
-
-.method9, .method9-image {
-    grid-row: 9 / span 1;
+p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin: 5%;
+    padding: 5%;
+    line-height: normal;
 }
 
 
-.text {
-    justify-self: left;
-    align-self: center;
-    max-height: 25vh;
-    overflow: scroll;
-    font-weight: bold;
-    background-color: lightgreen;
+.compost {
+    background-image: url(../images/1-yard-compactable-fill-dirt.jpeg);
+    background-color: #f1f1f1;
+
+      /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.compost img {
+    width: 70%;
+    height: 50%;
+}
+
+.composting_guide {
+    padding-bottom: 5%;
+    line-height: normal;
+}
+
+
+footer {
+    background-color: #2c4251;
+    padding: 5px 5px;
+    border: 10px solid firebrick;
+    color:  #f1f1f1;
+}
+
+i {
+    font-size: 30px;
+    color: lightgreen;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
+  
+  /* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+  /* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+  
+  /* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+  
+  /* Style the back side */
+.flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card img {
+    width: 100%;
+    height: 200px;
+}
 
 
+
+form {
+    text-align: center;
+    line-height: 30px;
+    height: 80%;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: lightgreen;
+    width: 300px;
+    margin: 0 auto;
+}
+  
+form > label {
+    text-align: left;
+}
 
 .gallery {
     display: flex;
@@ -221,7 +250,7 @@ img:hover{
     flex-wrap: wrap;
 }
 
-#logo{
+#flower {
     -webkit-animation: logo_grow;
     animation-name: logo_grow;
     animation-duration: 5s;
@@ -240,17 +269,25 @@ img:hover{
      to {width: 475px; opacity: 1;}
    }
 
-@media screen and (prefers-reduced-motion: reduce) {
-    #logo {
-        animation: none;
-    }
-}
 
-i {
-    font-size: 30px;
-    color: darkgreen;
-}
 
 #handshake {
     color: black;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    #flower {
+        animation: none;
+    }
+}
+@media screen and (min-width:700px) {
+}
+@media screen and (min-width: 1400px) {
+
+}
+@media screen and (min-width:1400px){
+    img{
+          border: 4px solid black;
+         width: 30%; 
+    }
 }
