@@ -54,6 +54,7 @@ a.skip:focus {
     font-weight: bold;
     text-decoration: #f1f1f1 underline;
     color:  #f1f1f1;
+    max-width: fit-content;
 }
 
 h1 {
@@ -170,10 +171,9 @@ i {
     width: 300px;
     height: 200px;
     border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    perspective: 1000px;
   }
   
-  /* This container is needed to position the front and back side */
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -183,12 +183,10 @@ i {
     transform-style: preserve-3d;
 }
   
-  /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
-  
-  /* Position the front and back side */
+
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -197,7 +195,6 @@ i {
     backface-visibility: hidden;
 }
   
-  /* Style the front side (fallback if image is missing) */
 .flip-card-front {
     background-color: #bbb;
     color: black;
@@ -205,9 +202,9 @@ i {
   
   /* Style the back side */
 .flip-card-back {
-    background-color: dodgerblue;
-    color: white;
-    transform: rotateY(180deg);
+    background-color: firebrick;
+    color: #f1f1f1;
+    transform: rotateY(180deg); 
 }
 
 .flip-card img {
@@ -231,6 +228,11 @@ form {
   
 form > label {
     text-align: left;
+}
+
+.message{
+    font-style: italic;
+    color: firebrick;
 }
 
 .gallery {
@@ -261,12 +263,12 @@ form > label {
  
  @-webkit-keyframes logo_grow{
      from {width: 25px; opacity: 0;}
-     to {width: 475px; opacity: 1;}
+     to {width: 100%; opacity: 1;}
    }  
  
  @keyframes logo_grow{
      from {width: 25px; opacity: 0;}
-     to {width: 475px; opacity: 1;}
+     to {width: 100%; opacity: 1;}
    }
 
 
@@ -276,16 +278,86 @@ form > label {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
+    html{
+        scroll-behavior: auto; /* Removes scroll animation */
+    }
     #flower {
+        animation: none;
+    }
+    .flip-card {
         animation: none;
     }
 }
 @media screen and (min-width:700px) {
+    .grid_container {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 25px;
+    }
+    #method1, .method1-image, 
+    #method3, .method3-image,
+    #method5, .method5-image, 
+    #method7, .method7-image {
+        grid-column: 1;
+    }
+    #method2, .method2-image, 
+    #method4, .method4-image,
+    #method6, .method6-image, 
+    #method8, .method8-image {
+        grid-column: 2;
+    }
+    #method1, #method2 {
+        grid-row: 1;
+    }
+    .method1-image, .method2-image {
+        grid-row: 2;
+    }
+    #method3, #method4 {
+        grid-row: 3;
+    }
+    .method3-image, .method4-image {
+        grid-row: 4;
+    }
+    #method5, #method6 {
+        grid-row: 5;
+    }
+    .method5-image, .method6-image {
+        grid-row: 6;
+    }
+    #method7, #method8 {
+        grid-row: 7;
+    }
+    .method7-image, .method8-image {
+        grid-row: 8;
+    }
+
+    .method9-image, #method9 {
+       justify-content: center;
+    }
+
+    #method9 {
+        grid-row: 9;
+    }
+
+    .method9-image {
+        grid-row: 10;
+    }
+
+    img{
+        border: 4px solid black;
+        height: 200px; 
+    }    
+
+    p {
+        padding: 0em;
+    }
+
+    .gallery {
+        flex-direction: row;
+        justify-content: baseline;
+        align-content: stretch;
+    }
 }
 @media screen and (min-width: 1400px) {
-
-}
-@media screen and (min-width:1400px){
     img{
           border: 4px solid black;
          width: 30%; 
